@@ -56,17 +56,17 @@ const MyCarousel = () => {
                   <div className="container">
                     <div className="grid grid-cols-1 md:grid-cols-2">
                       <div className="flex flex-col justify-center">
-                        <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-6xl font-semibold mb-2 sm:mb-4 md:mb-6 lg:mb-8 text-left">
+                        <h2 className="text-xl sm:text-2xl md:text-5xl font-semibold mb-2 sm:mb-4 md:mb-6 lg:mb-8 text-left md:text-center">
                           {slide.title}
                         </h2>
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold mb-2 sm:mb-4 md:mb-6 lg:mb-8 text-left">
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold mb-2 sm:mb-4 md:mb-6 lg:mb-8 text-left md:text-center">
                           {slide.title_2}
                         </h2>
-                        <p className="text-base sm:text-lg md:text-xl mb-2 sm:mb-3 md:mb-4 text-left">
+                        <p className="text-base sm:text-lg md:text-xl mb-2 sm:mb-3 md:mb-4 text-left md:text-center">
                           {slide.subtitle}
                         </p>
-                        <div className="flex justify-start">
-                          <button className="bg-black text-white px-4 py-2 sm:px-6 sm:py-3 md:px-10 md:py-4 lg:px-20 lg:py-6 text-sm sm:text-base md:text-lg font-semibold rounded-full mt-2 sm:mt-3 md:mt-4 lg:mt-5">
+                        <div className="flex justify-start md:justify-center">
+                          <button className="bg-black text-white px-4 py-2 sm:px-6 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold rounded-full mt-2 sm:mt-3 md:mt-4 lg:mt-5">
                             {slide.buttonText}
                           </button>
                         </div>
