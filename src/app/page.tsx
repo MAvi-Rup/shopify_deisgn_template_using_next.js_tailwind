@@ -1,4 +1,5 @@
 import ClosingHeader from "@/components/ClosingHeader";
+import ExclusivePost from "@/components/ExclusivePost";
 import FeatureContent from "@/components/FeatureContent";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
@@ -20,6 +21,7 @@ export default function Home() {
       </div>
       <FeatureContent />
       <TrendingPost />
+      <ExclusivePost />
     </main>
   );
 }

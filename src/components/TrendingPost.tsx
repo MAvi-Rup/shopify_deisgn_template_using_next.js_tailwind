@@ -1,29 +1,41 @@
 "use client";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
+import { products } from "@/lib/Products";
+import {
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  StarIcon,
+} from "@heroicons/react/24/solid";
 import { useState } from "react";
-
-const products = [
-  { id: 1, image: "./trending1.jpg", name: "Product 1", price: "$19.99" },
-  { id: 2, image: "./trending2.jpg", name: "Product 2", price: "$24.99" },
-  { id: 3, image: "./trending3.jpg", name: "Product 3", price: "$29.99" },
-  { id: 4, image: "./trending4.jpg", name: "Product 4", price: "$34.99" },
-  { id: 5, image: "./trending5.jpg", name: "Product 5", price: "$39.99" },
-  { id: 6, image: "./trending4.jpg", name: "Product 6", price: "$44.99" },
-];
+import CompareIcon from "./SVG/CompareIcon";
+import FavouriteIcon from "./SVG/FavouriteIcon";
+import QuickviewIcon from "./SVG/QuickviewIcon";
 
 const TrendingPost = () => {
   const [startIndex, setStartIndex] = useState(0);
 
   const nextSlide = () => {
     setStartIndex((prevIndex) =>
-      prevIndex + 4 >= products.length ? 0 : prevIndex + 4
+      prevIndex + 1 >= products.length ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setStartIndex((prevIndex) =>
-      prevIndex - 4 < 0 ? products.length - 4 : prevIndex - 4
+      prevIndex - 1 < 0 ? products.length - 4 : prevIndex - 1
     );
+  };
+
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <StarIcon
+          key={i}
+          className={`h-4 w-4 ${i <= rating ? "text-black" : "text-gray-300"}`}
+        />
+      );
+    }
+    return stars;
   };
 
   return (
@@ -42,28 +54,74 @@ const TrendingPost = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {products.slice(startIndex, startIndex + 4).map((product) => (
             <div key={product.id} className="relative group">
-              <div className="aspect-[330/450] overflow-hidden">
+              <div className="aspect-[330/500] overflow-hidden relative">
                 <img
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover"
                 />
+                <button className="absolute w-[calc(100%-20px)] left-1/2 transform -translate-x-1/2 bottom-5 py-2 md:py-4 bg-zinc-50 text-black hover:bg-black hover:text-white rounded-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:font-semibold">
+                  ADD TO CART
+                </button>
+                {product.discount && (
+                  <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 bg-red-700  text-white text-xs p-2 rounded-full">
+                    {product.discount}
+                  </div>
+                )}
+                <div className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 ">
+                  <div className="p-5 bg-white rounded-full flex flex-col mb-1 hover:bg-black hover:text-white">
+                    <CompareIcon />
+                  </div>
+                  <div className="p-5 bg-white  rounded-full flex flex-col mb-1">
+                    <FavouriteIcon />
+                  </div>
+                  <div className="p-5 bg-white  rounded-full flex flex-col mb-2">
+                    <QuickviewIcon />
+                  </div>
+                </div>
               </div>
-              <button className="absolute w-full mx-4  font-semibold bottom-5 left-1/2 transform -translate-x-1/2 py-2 md:py-4 md:px-16 bg-zinc-50 text-black hover:bg-black hover:text-white rounded-full text-center opacity-100 duration-300">
-                ADD TO CART
-              </button>
+              <div className="mt-2">
+                <h3 className="text-lg font-semibold">{product.name}</h3>
+                <div className="flex items-center mt-1">
+                  {renderStars(product.star)}
+                </div>
+
+                <div className="flex gap-5 mt-2">
+                  <p className="font-bold text-red-600">{product.price}</p>
+                  {product.actual_price && (
+                    <p className="line-through text-gray-500">
+                      {product.actual_price}
+                    </p>
+                  )}
+                </div>
+                {product.variant && (
+                  <div className="flex gap-2 mt-2">
+                    {product.variant.map((color) => (
+                      <div
+                        className={`rounded-full border-2 border-${color}-500`}
+                      >
+                        <div
+                          key={color}
+                          className={`w-5 h-5 rounded-full cursor-pointer m-1`}
+                          style={{ backgroundColor: color }}
+                        ></div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           ))}
         </div>
         <button
           onClick={prevSlide}
-          className="absolute top-0 left-1/2 md:left-20 md:top-1/2 transform -translate-y-1/2 bg-white bg-opacity-40 md:p-6 rounded-full p-2 focus:outline-none"
+          className="absolute top-0 left-1/2 md:left-20 md:top-2/4 transform -translate-y-1/2 bg-white bg-opacity-40  md:p-6 rounded-full p-2 focus:outline-none"
         >
           <ChevronLeftIcon className="h-6 w-6 text-black" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-20 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-50 md:p-6 rounded-full p-2 focus:outline-none"
+          className="absolute right-20 top-2/4 transform -translate-y-1/2 bg-white bg-opacity-50 md:p-6 rounded-full p-2 focus:outline-none"
         >
           <ChevronRightIcon className="h-6 w-6 text-black" />
         </button>
@@ -73,3 +131,5 @@ const TrendingPost = () => {
 };
 
 export default TrendingPost;
+
+// 466*605

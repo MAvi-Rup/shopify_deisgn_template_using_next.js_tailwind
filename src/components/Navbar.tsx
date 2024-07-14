@@ -67,7 +67,7 @@ const Navbar = () => {
           <SearchIcon />
           <ProfileIcon />
           <TimerIcon />
-          <div className="relative">
+          <div className="">
             <IconWithBadge badgeContent="0" />
           </div>
         </div>
@@ -77,8 +77,8 @@ const Navbar = () => {
       <Sheet>
         <div className="lg:hidden flex justify-between items-center py-4">
           <SheetTrigger>
-            <button className="text-gray-500">
-              <Bars3Icon className="h-6 w-6 text-black" />
+            <button className="text-gray-500 pl-4">
+              <Bars3Icon className="h-8 w-8 text-black" />
             </button>
           </SheetTrigger>
           <div>
@@ -86,19 +86,19 @@ const Navbar = () => {
           </div>
           <div className="flex items-center space-x-4">
             <SearchIcon />
-            <div className="relative">
+            <div className="">
               <IconWithBadge badgeContent="0" />
             </div>
           </div>
         </div>
 
         <SheetContent>
-          <div className="bg-white p-4">
-            <div className="flex justify-start items-center align-middle pb-4 pt-4  bg-orange-700 text-white mb-5">
-              <h2 className="text-xl font-semibold mr-5">Menu</h2>
+          <div className="bg-white">
+            <div className="flex justify-start items-center align-middle pb-4 pt-4 px-6  bg-orange-700 text-white mb-5">
+              <h2 className="text-xl font-semibold mr-6">Menu</h2>
               <h2 className="text-xl font-semibold">Categories</h2>
             </div>
-            <ul className="flex flex-col">
+            <ul className="flex flex-col pl-5">
               {menuArray.map((item, index) => (
                 <li key={index} className="mb-4">
                   <HoverCard>
