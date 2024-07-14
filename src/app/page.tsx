@@ -1,6 +1,8 @@
 import ClosingHeader from "@/components/ClosingHeader";
+import FeatureContent from "@/components/FeatureContent";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
+import TrendingPost from "@/components/TrendingPost";
 import dynamic from "next/dynamic";
 
 const MyCarousel = dynamic(() => import("@/components/Carousel"), {
@@ -16,6 +18,8 @@ export default function Home() {
       <div className="flex-grow">
         <MyCarousel />
       </div>
+      <FeatureContent />
+      <TrendingPost />
     </main>
   );
 }

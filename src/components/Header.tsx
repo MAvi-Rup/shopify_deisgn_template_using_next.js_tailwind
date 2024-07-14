@@ -5,26 +5,23 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { ChevronDownIcon } from "@heroicons/react/24/solid"; // Ensure correct version for compatibility
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 const Header = () => {
   return (
-    <div className="hidden lg:grid lg:grid-cols-3 lg:gap-4 lg:items-center lg:mx-4">
-      {/* Contact and Email */}
+    <div className="hidden md:block lg:grid lg:grid-cols-3 lg:gap-4 lg:items-center lg:mx-4">
       <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4 gap-2">
         <div className="text-xs lg:text-sm">+222-1800-2628</div>
         <div className="text-xs lg:text-sm">blueskytechcompany@gmail.com</div>
       </div>
 
-      {/* Sign Up Section */}
-      <div className="hidden md:flex md:justify-center md:items-center text-xs lg:text-sm">
+      <div className="hidden md:flex md:justify-center md:items-center text-xs lg:text-sm py-8">
         Sign up for 10% off your first order:{" "}
         <a href="#" className="text-blue-600 hover:underline">
           Sign Up
         </a>
       </div>
 
-      {/* Store and Dropdown Menus */}
       <div className="flex items-center space-x-2 lg:space-x-4 ml-auto">
         <ul className="flex flex-col lg:flex-row lg:space-x-4 space-y-2 lg:space-y-0">
           <li className="text-xs lg:text-sm">Our Stores</li>
