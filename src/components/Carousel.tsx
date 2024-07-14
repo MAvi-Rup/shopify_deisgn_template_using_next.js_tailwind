@@ -1,5 +1,4 @@
 "use client";
-import { Button } from "@/components/ui/button";
 import {
   Carousel,
   CarouselContent,
@@ -13,19 +12,22 @@ import { useState } from "react";
 const slides = [
   {
     image: "/slider1.jpg",
-    title: "Stylish Top Trending",
+    title: "Stylish",
+    title_2: "Top Trending",
     subtitle: "So soft, you don't want to take it off.",
     buttonText: "SHOP NOW",
   },
   {
     image: "/slider2.jpg",
-    title: "New Arrivals",
+    title: "Hulton",
+    title_2: "Perfect Simple",
     subtitle: "Discover the latest trends.",
     buttonText: "EXPLORE",
   },
   {
     image: "/slider3.jpg",
-    title: "Summer Collection",
+    title: "Online",
+    title_2: "Limited Edition",
     subtitle: "Light and breezy styles.",
     buttonText: "SHOP NOW",
   },
@@ -48,32 +50,41 @@ const MyCarousel = () => {
                   src={slide.image}
                   layout="responsive"
                   width={1200}
-                  height={400}
+                  height={800}
                   alt={`Slide ${index + 1}`}
                   className="object-cover"
                   style={{ marginTop: "-80px" }}
                 />
 
                 <div className="absolute inset-0 flex flex-col justify-center items-start p-2 lg:p-10 bg-opacity-30 text-black">
-                  <div className="ml-5 md:ml-48">
-                    <h2 className="text-3xl md:text-5xl font-bold mb-2 md:mb-4">
-                      {slide.title}
-                    </h2>
-                    <p className="text-lg md:text-xl mb-4">{slide.subtitle}</p>
-                    <Button
-                      variant="outline"
-                      className="bg-black text-white px-6 py-3 md:px-10 md:py-4 rounded-full text-center"
-                    >
-                      {slide.buttonText}
-                    </Button>
+                  <div className="container">
+                    <div className="grid grid-cols-2">
+                      <div className="md:flex md:flex-col md:justify-center">
+                        <h2 className="text-2xl md:text-6xl font-semibold md:mb-8 md:text-center">
+                          {slide.title}
+                        </h2>
+                        <h2 className="text-3xl md:text-6xl font-semibold md:mb-8 md:text-center">
+                          {slide.title_2}
+                        </h2>
+                        <p className="text-lg md:text-xl md:mb-4 md:text-center">
+                          {slide.subtitle}
+                        </p>
+                        <div className="md:flex md:justify-center">
+                          <button className="bg-black text-white px-6 py-3 md:px-20 md:py-6 font-semibold rounded-full ml-0 md:mt-5">
+                            {slide.buttonText}
+                          </button>
+                        </div>
+                      </div>
+                      <div></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden md:block absolute top-1/2 left-4 transform -translate-y-1/2 z-10" />
-        <CarouselNext className="hidden md:block absolute top-1/2 right-4 transform -translate-y-1/2 z-10" />
+        <CarouselPrevious className="hidden md:block absolute left-4 p-8 text-center hover:bg-black hover:text-white" />
+        <CarouselNext className="hidden md:block absolute  right-4 p-8 text-center hover:bg-black hover:text-white" />
       </Carousel>
     </div>
   );

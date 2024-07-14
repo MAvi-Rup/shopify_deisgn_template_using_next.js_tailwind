@@ -2,7 +2,7 @@ const IconWithBadge = ({ badgeContent }) => (
   <div className="relative mr-4 p-2">
     <div className="relative">
       <svg
-        width="21"
+        width="24"
         height="17"
         viewBox="0 0 14 13"
         fill="currentColor"
