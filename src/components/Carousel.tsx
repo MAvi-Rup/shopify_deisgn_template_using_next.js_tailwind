@@ -6,7 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import Image from "next/image";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
 const slides = [
@@ -46,7 +46,14 @@ const MyCarousel = () => {
           {slides.map((slide, index) => (
             <CarouselItem key={index} className="w-full">
               <div className="relative w-full">
-                <Image
+                <img
+                  src={slide.image}
+                  alt={`Slide ${index + 1}`}
+                  width={1200}
+                  height={900}
+                  className="object-cover w-full h-[700px]"
+                />
+                {/* <Image
                   src={slide.image}
                   layout="responsive"
                   width={1200}
@@ -54,7 +61,7 @@ const MyCarousel = () => {
                   alt={`Slide ${index + 1}`}
                   className="object-cover"
                   style={{ marginTop: "-80px" }}
-                />
+                /> */}
 
                 <div className="absolute inset-0 flex flex-col justify-center items-start p-2 lg:p-10 bg-opacity-30 text-black">
                   <div className="container">
@@ -83,8 +90,17 @@ const MyCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden md:block absolute left-4 p-8 text-center hover:bg-black hover:text-white" />
-        <CarouselNext className="hidden md:block absolute  right-4 p-8 text-center hover:bg-black hover:text-white" />
+        <CarouselPrevious className="hidden md:block absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-black/90 hover:text-white  rounded-full p-2 md:p-8 shadow-md transition-colors">
+          <ChevronLeftIcon className="h-6 w-6 text-gray-700 top-1" />
+        </CarouselPrevious>
+        <CarouselNext className="hidden md:block absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-black/90 hover:text-white rounded-full p-2 md:p-8 shadow-md transition-colors">
+          <ChevronRightIcon className="h-6 w-6 text-gray-700" />
+        </CarouselNext>
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+          <div className="h-2 w-2 rounded-full bg-gray-400 transition-colors hover:bg-black-600" />
+          <div className="h-2 w-2 rounded-full bg-gray-400 transition-colors hover:bg-black-600" />
+          <div className="h-2 w-2 rounded-full bg-gray-400 transition-colors hover:bg-black-600" />
+        </div>
       </Carousel>
     </div>
   );

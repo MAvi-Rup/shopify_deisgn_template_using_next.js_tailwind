@@ -1,22 +1,17 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
-import {
-  ChevronDownIcon,
-  Bars3Icon,
-  XMarkIcon,
-} from "@heroicons/react/24/solid";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ChevronRightIcon } from "@heroicons/react/16/solid";
+import { Bars3Icon, ChevronDownIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import IconWithBadge from "./SVG/IconWithBadge";
 import ProfileIcon from "./SVG/ProfileIcon";
 import SearchIcon from "./SVG/SearchIcon";
 import TimerIcon from "./SVG/TimerIcon";
-import { ChevronRightIcon } from "@heroicons/react/16/solid";
 
 const Navbar = () => {
   const menuArray = [
@@ -80,7 +75,7 @@ const Navbar = () => {
 
       {/* Navbar for mobile screens */}
       <Sheet>
-        <div className="lg:hidden flex justify-between items-center">
+        <div className="lg:hidden flex justify-between items-center py-4">
           <SheetTrigger>
             <button className="text-gray-500">
               <Bars3Icon className="h-6 w-6 text-black" />
