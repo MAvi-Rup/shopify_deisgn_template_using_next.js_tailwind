@@ -155,3 +155,60 @@ export const newProducts = [
     preOrder: true,
   },
 ];
+
+export const reviews = [
+  {
+    id: 1,
+    image: "./card1.png",
+    review:
+      "A perfect product, it keeps you very warm without overheating. True to size, I couldn't be happier with the purchase... Thank you! 🤗",
+    star: 5,
+    name: "Algistino Lionel",
+    status: "Verified Buyer",
+  },
+  {
+    id: 2,
+    image: "./card2.png",
+    review:
+      "Amazing quality! It fits perfectly and is very comfortable. Highly recommend to anyone looking for quality and style.",
+    star: 4,
+    name: "Jessica Miller",
+    status: "Verified Buyer",
+  },
+  {
+    id: 3,
+    image: "./card3.png",
+    review:
+      "Good value for the price. The material feels premium and it's very stylish. Will definitely buy again.",
+    star: 5,
+    name: "Michael Brown",
+    status: "Verified Buyer",
+  },
+  {
+    id: 4,
+    image: "./card1.png",
+    review:
+      "The product arrived on time and in excellent condition. It’s exactly as described. I’m very satisfied with my purchase.",
+    star: 4,
+    name: "Emily Johnson",
+    status: "Verified Buyer",
+  },
+  {
+    id: 5,
+    image: "./card2.png",
+    review:
+      "Great product, very well made. The color and fit are perfect. I would recommend it to anyone looking for something similar.",
+    star: 5,
+    name: "Chris Evans",
+    status: "Verified Buyer",
+  },
+  {
+    id: 6,
+    image: "./card3.png",
+    review:
+      "I love this product! It’s high-quality and fits exactly as expected. The customer service was also top-notch.",
+    star: 4,
+    name: "Sophia Lee",
+    status: "Verified Buyer",
+  },
+];

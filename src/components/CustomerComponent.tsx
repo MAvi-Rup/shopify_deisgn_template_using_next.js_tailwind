@@ -1,5 +1,5 @@
 "use client";
-import { newProducts, products } from "@/lib/Products";
+import { reviews } from "@/lib/Products";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -29,13 +29,13 @@ const CustomerReview = () => {
 
   const nextSlide = () => {
     setStartIndex((prevIndex) =>
-      prevIndex + 1 >= products.length ? 0 : prevIndex + 1
+      prevIndex + 1 >= reviews.length ? 0 : prevIndex + 1
     );
   };
 
   const prevSlide = () => {
     setStartIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? products.length - 1 : prevIndex - 1
+      prevIndex - 1 < 0 ? reviews.length - 1 : prevIndex - 1
     );
   };
 
@@ -68,35 +68,27 @@ const CustomerReview = () => {
         <div
           className={`grid grid-cols-1 md:grid-cols-${itemsToShow} gap-8 justify-items-center`}
         >
-          {newProducts
-            .slice(startIndex, startIndex + itemsToShow)
-            .map((product) => (
-              <div
-                key={product.id}
-                className="p-30 border border-gray-100 rounded-xl overflow-hidden relative shadow-md shadow-blue-50 text-center"
-              >
-                <div className="p-8">
-                  <div className="flex justify-center mt-5">
-                    <img
-                      className="object-cover w-20 h-20 mb-8 rounded-full "
-                      src="./card1.png"
-                      alt=""
-                    />
-                  </div>
-                  <p className="text-center">
-                    A perfect product, it keeps you very warm without over
-                    heating. True to size, I couldn't be happier with the
-                    purchase... Thank you! 🤗
-                  </p>
-                  <div className="flex items-center justify-center mt-5">
-                    {renderStars(product.star)}
-                  </div>
-                  <p className="text-center mt-5 mb-8">
-                    Algistino Lionel - Verified Buyer
-                  </p>
+          {reviews.slice(startIndex, startIndex + itemsToShow).map((review) => (
+            <div
+              key={review.id}
+              className="p-30 border border-gray-100 rounded-xl overflow-hidden relative shadow-md shadow-blue-50 text-center"
+            >
+              <div className="p-8">
+                <div className="flex justify-center mt-5">
+                  <img
+                    className="object-cover w-20 h-20 mb-8 rounded-full "
+                    src={review.image}
+                    alt=""
+                  />
                 </div>
+                <p className="text-center">{review.review}</p>
+                <div className="flex items-center justify-center mt-5">
+                  {renderStars(review.star)}
+                </div>
+                <p className="text-center mt-5 mb-8">{review.name}</p>
               </div>
-            ))}
+            </div>
+          ))}
         </div>
         <button
           onClick={prevSlide}

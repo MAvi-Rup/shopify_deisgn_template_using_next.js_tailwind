@@ -17,10 +17,10 @@ const ShopGram = () => {
         </div>
       </div>
       <div className=" px-4 md:px-20 mt-4 md:mt-16">
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-1">
+        <div className="grid grid-cols-3 md:grid-cols-6 gap-1">
           <div className="relative">
             <img className="rounded-lg" src="./gram1.png" alt="" srcset="" />
-            <div className=" absolute right-1 top-1">
+            <div className=" absolute right-2 top-1">
               <CartIcon />
             </div>
           </div>
