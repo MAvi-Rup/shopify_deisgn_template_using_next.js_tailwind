@@ -58,7 +58,7 @@ const TrendingPost = () => {
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover hover:scale-110 duration-300 "
+                  className="w-full h-full object-cover hover:scale-110 duration-300 rounded-lg"
                 />
                 <button className="absolute w-[calc(100%-20px)] left-1/2 transform -translate-x-1/2 bottom-5 py-2 md:py-4 bg-zinc-50 text-black hover:bg-black hover:text-white rounded-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:font-semibold">
                   ADD TO CART

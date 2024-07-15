@@ -47,6 +47,3 @@ const ExclusivePost = () => {
 };
 
 export default ExclusivePost;
-{
-  /* <span className="absolute left-0 bottom-0 w-full h-px bg-black transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-out"></span> */
-}

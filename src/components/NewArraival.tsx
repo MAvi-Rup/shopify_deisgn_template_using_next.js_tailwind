@@ -11,7 +11,7 @@ import FavouriteIcon from "./SVG/FavouriteIcon";
 import QuickviewIcon from "./SVG/QuickviewIcon";
 
 const NewArraival = () => {
-  const [startIndex, setStartIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState<number>(0);
 
   const nextSlide = () => {
     setStartIndex((prevIndex) =>
@@ -25,7 +25,7 @@ const NewArraival = () => {
     );
   };
 
-  const renderStars: string[] = (rating) => {
+  const renderStars: string[] = (rating: number) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       stars.push(
