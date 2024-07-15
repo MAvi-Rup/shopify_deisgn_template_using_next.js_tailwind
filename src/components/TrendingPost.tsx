@@ -48,6 +48,20 @@ const TrendingPost = () => {
           <p className="text-center text-lg text-zinc-600 mt-4 mb-5">
             Here's some of our most popular products people are in love with.
           </p>
+          <div className="flex justify-center space-x-4 mt-4 md:hidden">
+            <button
+              onClick={prevSlide}
+              className="bg-white bg-opacity-40 p-2 rounded-full focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+            >
+              <ChevronLeftIcon className="h-6 w-6 text-black" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="bg-white bg-opacity-50 p-2 rounded-full focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+            >
+              <ChevronRightIcon className="h-6 w-6 text-black" />
+            </button>
+          </div>
         </div>
       </div>
       <div className="relative px-4 md:px-20 mt-4 md:mt-16">
@@ -115,13 +129,13 @@ const TrendingPost = () => {
         </div>
         <button
           onClick={prevSlide}
-          className="absolute top-0 left-1/2 md:left-20 md:top-2/4 transform -translate-y-1/2 bg-white bg-opacity-40 hover:bg-slate-400 hover:bg-opacity-30  md:p-6 rounded-full p-2 focus:outline-none"
+          className="hidden md:block absolute top-0 left-1/2 md:left-20 md:top-2/4 transform -translate-y-1/2 bg-white bg-opacity-40 hover:bg-slate-400 hover:bg-opacity-30  md:p-6 rounded-full p-2 focus:outline-none"
         >
           <ChevronLeftIcon className="h-6 w-6 text-black" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-20 top-2/4 transform -translate-y-1/2 bg-white bg-opacity-50 md:p-6 rounded-full p-2 focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+          className="hidden md:block absolute right-20 top-2/4 transform -translate-y-1/2 bg-white bg-opacity-50 md:p-6 rounded-full p-2 focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
         >
           <ChevronRightIcon className="h-6 w-6 text-black" />
         </button>

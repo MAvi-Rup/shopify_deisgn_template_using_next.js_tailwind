@@ -25,7 +25,7 @@ const NewArraival = () => {
     );
   };
 
-  const renderStars: string[] = (rating: number) => {
+  const renderStars = (rating: number) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       stars.push(
@@ -41,13 +41,27 @@ const NewArraival = () => {
   return (
     <div className="mb-8">
       <div className="container mt-16">
-        <div className="">
+        <div className="flex flex-col items-center md:block">
           <h1 className="text-2xl md:text-5xl text-center text-black">
             New Arrivals
           </h1>
           <p className="text-center text-lg text-zinc-600 mt-4 mb-5">
             Find the top most popular items in Umino best sellers.
           </p>
+          <div className="flex justify-center space-x-4 mt-4 md:hidden">
+            <button
+              onClick={prevSlide}
+              className="bg-white bg-opacity-40 p-2 rounded-full focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+            >
+              <ChevronLeftIcon className="h-6 w-6 text-black" />
+            </button>
+            <button
+              onClick={nextSlide}
+              className="bg-white bg-opacity-50 p-2 rounded-full focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+            >
+              <ChevronRightIcon className="h-6 w-6 text-black" />
+            </button>
+          </div>
         </div>
       </div>
       <div className="relative px-4 md:px-20 mt-4 md:mt-16">
@@ -70,12 +84,10 @@ const NewArraival = () => {
                   </button>
                 )}
 
-                {product.preOrder === true ? (
+                {product.preOrder === true && (
                   <div className="absolute top-12 left-2 opacity-100 bg-green-700  text-white text-xs p-2 rounded-full">
                     Pre Order
                   </div>
-                ) : (
-                  <></>
                 )}
                 {product.discount && (
                   <div className="absolute top-2 left-2 opacity-100 bg-red-700  text-white text-xs p-2 rounded-full">
@@ -112,10 +124,10 @@ const NewArraival = () => {
                   <div className="flex gap-2 mt-2">
                     {product.variant.map((color) => (
                       <div
+                        key={color}
                         className={`rounded-full border-2 border-${color}-500`}
                       >
                         <div
-                          key={color}
                           className={`w-5 h-5 rounded-full cursor-pointer m-1`}
                           style={{ backgroundColor: color }}
                         ></div>
@@ -129,13 +141,13 @@ const NewArraival = () => {
         </div>
         <button
           onClick={prevSlide}
-          className="absolute top-0 left-1/2 md:left-20 md:top-2/4 transform -translate-y-1/2 bg-white bg-opacity-40  md:p-6 rounded-full p-2 focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+          className="hidden md:block absolute left-20 top-2/4 transform -translate-y-1/2 bg-white bg-opacity-40 p-6 rounded-full focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
         >
           <ChevronLeftIcon className="h-6 w-6 text-black" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-20 top-2/4 transform -translate-y-1/2 bg-white bg-opacity-50 md:p-6 rounded-full p-2 focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+          className="hidden md:block absolute right-20 top-2/4 transform -translate-y-1/2 bg-white bg-opacity-50 p-6 rounded-full focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
         >
           <ChevronRightIcon className="h-6 w-6 text-black" />
         </button>
