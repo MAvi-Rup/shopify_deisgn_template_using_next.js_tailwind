@@ -212,7 +212,6 @@ const Footer = () => {
             </div>
 
             <div className="col-span-2">
-              {/* Here Sign Up Newsteller Section need more space in grid system. so i want that in grid col 3 first two take less space and its take the rest of the sapce as needed.. Because by button SUBSCribe is over flow x */}
               <p className="font-medium text-gray-900">Sign Up to Newsletter</p>
 
               <div className="mt-6 space-y-4 text-sm">
@@ -220,9 +219,9 @@ const Footer = () => {
                   Enter your email address to get $10 off your first order and
                   free shipping.Updates information on Sales and Offers.
                 </p>
-                <section className=" flex gap-4">
+                <section className=" flex gap-4 mt-5">
                   <input
-                    className="p-3 border-2 border-amber-950 rounded-full"
+                    className=" w-full p-3 border-2 border-amber-950 rounded-full"
                     placeholder="Enter Your Email..."
                     type="text"
                   />
