@@ -219,7 +219,7 @@ const Footer = () => {
                   Enter your email address to get $10 off your first order and
                   free shipping.Updates information on Sales and Offers.
                 </p>
-                <section className=" flex gap-4 mt-5">
+                <section className=" flex gap-4">
                   <input
                     className=" w-full p-3 border-2 border-amber-950 rounded-full"
                     placeholder="Enter Your Email..."

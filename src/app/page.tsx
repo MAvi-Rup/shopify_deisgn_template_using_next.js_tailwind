@@ -12,7 +12,7 @@ import TrendingPost from "@/components/TrendingPost";
 
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen overflow-x-hidden">
+    <main className="flex flex-col min-h-screen overflow-hidden">
       <ClosingHeader />
       <Header />
       <Navbar />
