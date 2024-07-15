@@ -6,7 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/solid";
 import { useState } from "react";
 
 const slides = [
@@ -79,12 +78,8 @@ const MyCarousel = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hidden sm:block absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-black/90 hover:text-white rounded-full p-1 sm:p-2 md:p-4 lg:p-8 shadow-md transition-colors">
-          <ChevronLeftIcon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-gray-700" />
-        </CarouselPrevious>
-        <CarouselNext className="hidden sm:block absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-10 bg-white/70 hover:bg-black/90 hover:text-white rounded-full p-1 sm:p-2 md:p-4 lg:p-8 shadow-md transition-colors">
-          <ChevronRightIcon className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-gray-700" />
-        </CarouselNext>
+        <CarouselPrevious className="hidden md:block absolute left-[50px] top-1/2 -translate-y-1/2 fill-black hover:bg-black hover:text-white" />
+        <CarouselNext className="hidden md:block absolute right-[50px] top-1/2 -translate-y-1/2 fill-black hover:bg-black hover:text-white" />
         <div className="absolute bottom-2 sm:bottom-4 left-1/2 -translate-x-1/2 flex gap-1 sm:gap-2">
           {slides.map((_, index) => (
             <div

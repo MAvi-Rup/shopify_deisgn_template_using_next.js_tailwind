@@ -22,7 +22,7 @@ const FeatureContent = () => {
               src="./feature1.jpg"
               alt="Clothings"
             />
-            <button className="absolute font-semibold bottom-7 left-1/2 transform -translate-x-1/2 py-2 px-8 md:py-4 md:px-16 bg-zinc-50 text-black rounded-full text-center opacity-100 ">
+            <button className="absolute font-semibold bottom-1 md:bottom-7 left-1/2 transform -translate-x-1/2 py-2 px-2 md:py-4 md:px-16 bg-zinc-50 text-black rounded-full text-center opacity-100 ">
               Clothings
             </button>
           </div>
@@ -33,13 +33,13 @@ const FeatureContent = () => {
                 src="./feature2.jpg"
                 alt="Sunglass"
               />
-              <button className="absolute font-semibold bottom-7 left-1/2 transform -translate-x-1/2 py-2 px-8 md:py-4 md:px-16 bg-zinc-50 text-black rounded-full text-center opacity-100 ">
+              <button className="absolute font-semibold bottom-1 md:bottom-7 left-1/2 transform -translate-x-1/2 py-2 px-2 md:py-4 md:px-16 bg-zinc-50 text-black rounded-full text-center opacity-100 ">
                 Sunglass
               </button>
             </div>
             <div className="relative">
               <img className="rounded w-full" src="./feature3.jpg" alt="Bag" />
-              <button className="absolute font-semibold bottom-7 left-1/2 transform -translate-x-1/2 py-2 px-8 md:py-4 md:px-16 bg-zinc-50 text-black rounded-full text-center opacity-100 ">
+              <button className="absolute font-semibold bottom-1 md:bottom-7 left-1/2 transform -translate-x-1/2 py-2 px-2 md:py-4 md:px-16 bg-zinc-50 text-black rounded-full text-center opacity-100 ">
                 Bag
               </button>
             </div>
@@ -50,7 +50,7 @@ const FeatureContent = () => {
               src="./feature4.jpg"
               alt="Sneakers"
             />
-            <button className="absolute font-semibold bottom-7 left-1/2 transform -translate-x-1/2 py-2 px-8 md:py-4 md:px-16 bg-zinc-50 text-black rounded-full text-center opacity-100 ">
+            <button className="absolute font-semibold bottom-1 md:bottom-7 left-1/2 transform -translate-x-1/2 py-2 px-2 md:py-4 md:px-16 bg-zinc-50 text-black rounded-full text-center opacity-100 ">
               Sneakers
             </button>
           </div>

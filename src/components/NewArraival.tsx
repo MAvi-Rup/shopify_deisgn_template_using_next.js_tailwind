@@ -1,5 +1,5 @@
 "use client";
-import { products } from "@/lib/Products";
+import { newProducts, products } from "@/lib/Products";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -10,12 +10,12 @@ import CompareIcon from "./SVG/CompareIcon";
 import FavouriteIcon from "./SVG/FavouriteIcon";
 import QuickviewIcon from "./SVG/QuickviewIcon";
 
-const TrendingPost = () => {
+const NewArraival = () => {
   const [startIndex, setStartIndex] = useState(0);
 
   const nextSlide = () => {
     setStartIndex((prevIndex) =>
-      prevIndex + 1 >= products.length ? 0 : prevIndex + 1
+      prevIndex + 1 >= products.length ? products.length - 4 : prevIndex + 1
     );
   };
 
@@ -31,7 +31,7 @@ const TrendingPost = () => {
       stars.push(
         <StarIcon
           key={i}
-          className={`h-4 w-4 ${i <= rating ? "text-black" : "text-gray-300"}`}
+          className={`h-3 w-3 ${i <= rating ? "text-black" : "text-gray-300"}`}
         />
       );
     }
@@ -43,16 +43,16 @@ const TrendingPost = () => {
       <div className="container mt-16">
         <div className="">
           <h1 className="text-2xl md:text-5xl text-center text-black">
-            Trending this Week
+            New Arrivals
           </h1>
           <p className="text-center text-lg text-zinc-600 mt-4 mb-5">
-            Here's some of our most popular products people are in love with.
+            Find the top most popular items in Umino best sellers.
           </p>
         </div>
       </div>
       <div className="relative px-4 md:px-20 mt-4 md:mt-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          {products.slice(startIndex, startIndex + 4).map((product) => (
+          {newProducts.slice(startIndex, startIndex + 4).map((product) => (
             <div key={product.id} className="relative group">
               <div className="aspect-[330/500] overflow-hidden relative">
                 <img
@@ -60,11 +60,25 @@ const TrendingPost = () => {
                   alt={product.name}
                   className="w-full h-full object-cover hover:scale-110 duration-300 "
                 />
-                <button className="absolute w-[calc(100%-20px)] left-1/2 transform -translate-x-1/2 bottom-5 py-2 md:py-4 bg-zinc-50 text-black hover:bg-black hover:text-white rounded-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:font-semibold">
-                  ADD TO CART
-                </button>
+                {product.preOrder === true ? (
+                  <button className="absolute w-[calc(100%-20px)] left-1/2 transform -translate-x-1/2 bottom-5 py-2 md:py-4 bg-zinc-50 text-black hover:bg-black hover:text-white rounded-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:font-semibold">
+                    Pre Order
+                  </button>
+                ) : (
+                  <button className="absolute w-[calc(100%-20px)] left-1/2 transform -translate-x-1/2 bottom-5 py-2 md:py-4 bg-zinc-50 text-black hover:bg-black hover:text-white rounded-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:font-semibold">
+                    ADD TO CART
+                  </button>
+                )}
+
+                {product.preOrder === true ? (
+                  <div className="absolute top-12 left-2 opacity-100 bg-green-700  text-white text-xs p-2 rounded-full">
+                    Pre Order
+                  </div>
+                ) : (
+                  <></>
+                )}
                 {product.discount && (
-                  <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 bg-red-700  text-white text-xs p-2 rounded-full">
+                  <div className="absolute top-2 left-2 opacity-100 bg-red-700  text-white text-xs p-2 rounded-full">
                     {product.discount}
                   </div>
                 )}
@@ -115,7 +129,7 @@ const TrendingPost = () => {
         </div>
         <button
           onClick={prevSlide}
-          className="absolute top-0 left-1/2 md:left-20 md:top-2/4 transform -translate-y-1/2 bg-white bg-opacity-40 hover:bg-slate-400 hover:bg-opacity-30  md:p-6 rounded-full p-2 focus:outline-none"
+          className="absolute top-0 left-1/2 md:left-20 md:top-2/4 transform -translate-y-1/2 bg-white bg-opacity-40  md:p-6 rounded-full p-2 focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
         >
           <ChevronLeftIcon className="h-6 w-6 text-black" />
         </button>
@@ -130,6 +144,4 @@ const TrendingPost = () => {
   );
 };
 
-export default TrendingPost;
-
-// 466*605
+export default NewArraival;
