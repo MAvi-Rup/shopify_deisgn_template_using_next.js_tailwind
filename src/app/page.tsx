@@ -6,7 +6,7 @@ import FeatureContent from "@/components/FeatureContent";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
-import NewArraival from "@/components/NewArraival";
+import NewArrivals from "@/components/NewArraivals";
 import ShopGram from "@/components/ShopGram";
 import TrendingPost from "@/components/TrendingPost";
 
@@ -20,7 +20,8 @@ export default function Home() {
       <FeatureContent />
       <TrendingPost />
       <ExclusivePost />
-      <NewArraival />
+
+      <NewArrivals />
       <CustomerReview />
       <ShopGram />
       <Footer />

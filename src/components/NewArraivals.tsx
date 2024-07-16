@@ -1,5 +1,5 @@
 "use client";
-import { products } from "@/lib/Products";
+import { newProducts } from "@/lib/Products";
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -14,7 +14,7 @@ import CompareIcon from "./SVG/CompareIcon";
 import FavouriteIcon from "./SVG/FavouriteIcon";
 import QuickviewIcon from "./SVG/QuickviewIcon";
 
-const TrendingPost = () => {
+const NewArrivals = () => {
   const swiperRef = useRef(null);
   const [isHovering, setIsHovering] = useState(false);
 
@@ -36,10 +36,10 @@ const TrendingPost = () => {
       <div className="container mt-16">
         <div className="flex flex-col items-center md:block">
           <h1 className="text-2xl md:text-5xl text-center text-black">
-            Trending this Week
+            New Arrivals
           </h1>
           <p className="text-center text-lg text-zinc-600 mt-4 mb-5">
-            Here’s some of our most popular products people are in love with.
+            Find the top most popular items in Umino best sellers.
           </p>
           <div className="flex justify-center space-x-4 mt-4 lg:hidden">
             <button
@@ -81,7 +81,7 @@ const TrendingPost = () => {
             },
           }}
         >
-          {products.map((product) => (
+          {newProducts.map((product) => (
             <SwiperSlide key={product.id}>
               <div className="relative group">
                 <div className="aspect-[330/500] overflow-hidden relative">
@@ -178,4 +178,4 @@ const TrendingPost = () => {
   );
 };
 
-export default TrendingPost;
+export default NewArrivals;
