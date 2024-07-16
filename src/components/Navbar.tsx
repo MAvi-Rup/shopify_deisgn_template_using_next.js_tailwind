@@ -12,10 +12,6 @@ import IconWithBadge from "./SVG/IconWithBadge";
 import ProfileIcon from "./SVG/ProfileIcon";
 import SearchIcon from "./SVG/SearchIcon";
 import TimerIcon from "./SVG/TimerIcon";
-// import IconWithBadge from "./SVG/IconWithBadge";
-// import ProfileIcon from "./SVG/ProfileIcon";
-// import SearchIcon from "./SVG/SearchIcon";
-// import TimerIcon from "./SVG/TimerIcon";
 
 const Navbar = () => {
   const menuArray = [
@@ -42,7 +38,6 @@ const Navbar = () => {
   ];
   return (
     <div>
-      {/* Navbar for larger screens */}
       <div className="hidden lg:grid lg:grid-cols-3 lg:gap-4 lg:items-center lg:mx-2">
         <div className="p-4 flex items-center">
           <Image src="/logo.jpg" width={95} height={20} alt="Logo" />
@@ -50,9 +45,12 @@ const Navbar = () => {
         <div className="m-auto flex justify-center">
           <ul className="flex items-center justify-center p-4 space-x-3 lg:space-x-6">
             {menuArray.map((item, index) => (
-              <li key={index} className="p-2">
+              <li
+                key={index}
+                className="p-2 text-base font-medium hover:text-red-600"
+              >
                 <HoverCard>
-                  <HoverCardTrigger className="flex items-center">
+                  <HoverCardTrigger className="flex items-center ">
                     {item.name}
                     <ChevronDownIcon
                       aria-hidden="true"
@@ -93,7 +91,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-
         <SheetContent>
           <div className="bg-white">
             <div className="flex justify-start items-center align-middle pb-4 pt-4 px-6  bg-orange-700 text-white mb-5">
@@ -102,10 +99,10 @@ const Navbar = () => {
             </div>
             <ul className="flex flex-col pl-5">
               {menuArray.map((item, index) => (
-                <li key={index} className="mb-4">
+                <li key={index} className="mb-4 ">
                   <HoverCard>
-                    <HoverCardTrigger className="flex items-center justify-between">
-                      {item.name}
+                    <HoverCardTrigger className="flex items-center justify-between hover:text-red-600">
+                      <span className=" ">{item.name}</span>
                       <ChevronRightIcon
                         aria-hidden="true"
                         className="ml-1 h-5 w-5 text-gray-400"

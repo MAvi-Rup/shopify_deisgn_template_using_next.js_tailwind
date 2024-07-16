@@ -87,7 +87,7 @@ const CustomerReview = () => {
 
         <button
           onClick={() => swiperRef.current?.slidePrev()}
-          className={`absolute top-1/2 left-0 md:left-28 transform -translate-y-1/2 bg-white bg-opacity-40 p-2 md:p-4 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-100 hover:text-white z-10 transition-opacity duration-300 ${
+          className={`absolute top-1/2 left-0 md:left-24 transform -translate-y-1/2 bg-white bg-opacity-40 p-2 md:p-4 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-100 hover:text-white z-10 transition-opacity duration-300 ${
             isHovering ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -95,7 +95,7 @@ const CustomerReview = () => {
         </button>
         <button
           onClick={() => swiperRef.current?.slideNext()}
-          className={`absolute top-1/2 right-0 md:right-28 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 md:p-4 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-100 hover:text-white z-10 transition-opacity duration-300 ${
+          className={`absolute top-1/2 right-0 md:right-24 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 md:p-4 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-100 hover:text-white z-10 transition-opacity duration-300 ${
             isHovering ? "opacity-100" : "opacity-0"
           }`}
         >

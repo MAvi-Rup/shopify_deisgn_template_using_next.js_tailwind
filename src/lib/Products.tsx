@@ -40,7 +40,7 @@ export const products = [
   },
   {
     id: 5,
-    image: "./trending5.jpg",
+    image: "./trending7.jpg",
     name: "Leather Jacket",
     price: "$39.99",
     star: 5,
@@ -67,7 +67,7 @@ export const products = [
   },
   {
     id: 8,
-    image: "./trending3.jpg",
+    image: "./trending6.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",
@@ -85,7 +85,7 @@ export const products = [
   },
   {
     id: 10,
-    image: "./trending2.jpg",
+    image: "./trending7.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",
@@ -148,6 +148,24 @@ export const newProducts = [
   {
     id: 6,
     image: "./newArraival6.jpg",
+    name: "Denim Shorts",
+    price: "$44.99",
+    actual_price: "$60",
+    star: 4,
+    preOrder: true,
+  },
+  {
+    id: 7,
+    image: "./newArraival7.jpg",
+    name: "Denim Shorts",
+    price: "$44.99",
+    actual_price: "$60",
+    star: 4,
+    preOrder: true,
+  },
+  {
+    id: 8,
+    image: "./newArraival2.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",

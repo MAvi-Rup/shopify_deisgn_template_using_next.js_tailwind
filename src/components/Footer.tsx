@@ -4,9 +4,9 @@ import InstagramIcon from "./SVG/InstagramIcon";
 
 const Footer = () => {
   return (
-    <footer className="bg-white mt-16">
+    <footer className="bg-white mt-16 mb-5">
       <div className="mx-8">
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
           <div>
             <img className="w-24" src="./logo.jpg" alt="" srcset="" />
 
@@ -15,7 +15,7 @@ const Footer = () => {
               <br /> +222-1800-2628 <br /> blueskytechcompany@gmail.com
             </p>
 
-            <ul className="mt-8 flex gap-6">
+            <ul className="mt-8 flex gap-4">
               <li>
                 <a
                   href="#"
@@ -78,6 +78,79 @@ const Footer = () => {
                   <span className="sr-only">Dribbble</span>
 
                   <InstagramIcon />
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div className=" hidden md:block">
+            <p className="font-semibold  text-gray-900">Customer Service</p>
+
+            <ul className="mt-6 space-y-4 text-sm">
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  {" "}
+                  Privacy Policy{" "}
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  {" "}
+                  Refund Policy{" "}
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  {" "}
+                  Shipping and Return{" "}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  {" "}
+                  Term and Codition{" "}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  {" "}
+                  Advance Search{" "}
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  {" "}
+                  Theme FAQs{" "}
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#"
+                  className="text-gray-700 transition hover:opacity-75"
+                >
+                  {" "}
+                  Store Locations{" "}
                 </a>
               </li>
             </ul>
