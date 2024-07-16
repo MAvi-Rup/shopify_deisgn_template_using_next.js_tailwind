@@ -40,17 +40,23 @@ const Navbar = () => {
     <div>
       <div className="hidden lg:grid lg:grid-cols-3 lg:gap-4 lg:items-center lg:mx-2">
         <div className="p-4 flex items-center">
-          <Image src="/logo.jpg" width={95} height={20} alt="Logo" />
+          <Image
+            src="/logo.jpg"
+            width={95}
+            height={20}
+            alt="Logo"
+            className="cursor-pointer"
+          />
         </div>
         <div className="m-auto flex justify-center">
           <ul className="flex items-center justify-center p-4 space-x-3 lg:space-x-6">
             {menuArray.map((item, index) => (
               <li
                 key={index}
-                className="p-2 text-base font-medium hover:text-red-600"
+                className="p-2 text-base font-medium hover:text-red-600 cursor-pointer"
               >
                 <HoverCard>
-                  <HoverCardTrigger className="flex items-center ">
+                  <HoverCardTrigger className="flex items-center hover:text-red-600">
                     {item.name}
                     <ChevronDownIcon
                       aria-hidden="true"

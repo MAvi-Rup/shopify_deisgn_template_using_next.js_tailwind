@@ -19,37 +19,37 @@ const ShopGram = () => {
       <div className=" px-4 md:px-20 mt-4 md:mt-16">
         <div className="grid grid-cols-2 md:grid-cols-6 gap-1">
           <div className="relative">
-            <img className="rounded-lg" src="./gram1.png" alt="" srcset="" />
+            <img className="rounded-lg" src="./gram1.png" />
             <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
           <div className="relative">
-            <img className="rounded-lg" src="./gram2.png" alt="" srcset="" />
+            <img className="rounded-lg" src="./gram2.png" />
             <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
           <div className="hidden md:block relative">
-            <img className="rounded-lg" src="./gram3.png" alt="" srcset="" />
+            <img className="rounded-lg" src="./gram3.png" />
             <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
           <div className=" hidden md:block relative">
-            <img className="rounded-lg" src="./gram6.png" alt="" srcset="" />
+            <img className="rounded-lg" src="./gram6.png" />
             <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
           <div className="hidden md:block relative">
-            <img className="rounded-lg" src="./gram5.png" alt="" srcset="" />
+            <img className="rounded-lg" src="./gram5.png" />
             <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
           <div className="hidden md:block relative">
-            <img className="rounded-lg" src="./gram6.png" alt="" srcset="" />
+            <img className="rounded-lg" src="./gram6.png" />
             <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
@@ -61,5 +61,3 @@ const ShopGram = () => {
 };
 
 export default ShopGram;
-
-// 466*605
