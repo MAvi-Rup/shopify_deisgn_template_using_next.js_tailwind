@@ -5,39 +5,15 @@ import {
   ChevronRightIcon,
   StarIcon,
 } from "@heroicons/react/24/solid";
-import { useEffect, useState } from "react";
+import { useRef, useState } from "react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Navigation } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const CustomerReview = () => {
-  const [startIndex, setStartIndex] = useState(0);
-  const [itemsToShow, setItemsToShow] = useState(3);
-
-  //   Handle the Window Size State
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth < 768) {
-        setItemsToShow(1);
-      } else {
-        setItemsToShow(3);
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  const nextSlide = () => {
-    setStartIndex((prevIndex) =>
-      prevIndex + 1 >= reviews.length ? 0 : prevIndex + 1
-    );
-  };
-
-  const prevSlide = () => {
-    setStartIndex((prevIndex) =>
-      prevIndex - 1 < 0 ? reviews.length - 1 : prevIndex - 1
-    );
-  };
+  const swiperRef = useRef(null);
+  const [isHovering, setIsHovering] = useState(false);
 
   const renderStars = (rating) => {
     const stars = [];
@@ -64,43 +40,66 @@ const CustomerReview = () => {
           </p>
         </div>
       </div>
-      <div className="relative px-4 md:px-20 mt-4 md:mt-16">
-        <div
-          className={`grid grid-cols-1 md:grid-cols-${itemsToShow} gap-8 justify-items-center`}
+      <div
+        className="relative px-4 md:px-20 mt-4 md:mt-16"
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
+      >
+        <Swiper
+          modules={[Navigation]}
+          spaceBetween={20}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
         >
-          {reviews.slice(startIndex, startIndex + itemsToShow).map((review) => (
-            <div
-              key={review.id}
-              className="p-30 border border-gray-100 rounded-xl overflow-hidden relative shadow-md shadow-blue-50 text-center"
-            >
-              <div className="p-8">
-                <div className="flex justify-center mt-5">
-                  <img
-                    className="object-cover w-20 h-20 mb-8 rounded-full "
-                    src={review.image}
-                    alt=""
-                  />
+          {reviews.map((review) => (
+            <SwiperSlide key={review.id}>
+              <div className="p-30 border border-gray-100 rounded-xl overflow-hidden relative shadow-md shadow-blue-50 text-center">
+                <div className="p-8">
+                  <div className="flex justify-center mt-5">
+                    <img
+                      className="object-cover w-20 h-20 mb-8 rounded-full "
+                      src={review.image}
+                      alt=""
+                    />
+                  </div>
+                  <p className="text-center">{review.review}</p>
+                  <div className="flex items-center justify-center mt-5">
+                    {renderStars(review.star)}
+                  </div>
+                  <p className="text-center mt-5 mb-8">{review.name}</p>
                 </div>
-                <p className="text-center">{review.review}</p>
-                <div className="flex items-center justify-center mt-5">
-                  {renderStars(review.star)}
-                </div>
-                <p className="text-center mt-5 mb-8">{review.name}</p>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
+
         <button
-          onClick={prevSlide}
-          className="absolute top-1/2 left-0 md:left-4 transform -translate-y-1/2 bg-white bg-opacity-40 p-2 md:p-4 rounded-full focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+          onClick={() => swiperRef.current?.slidePrev()}
+          className={`absolute top-1/2 left-0 md:left-28 transform -translate-y-1/2 bg-white bg-opacity-40 p-2 md:p-4 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-100 hover:text-white z-10 transition-opacity duration-300 ${
+            isHovering ? "opacity-100" : "opacity-0"
+          }`}
         >
-          <ChevronLeftIcon className="h-6 w-6 text-black" />
+          <ChevronLeftIcon className="h-6 w-6" />
         </button>
         <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-0 md:right-4 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 md:p-4 rounded-full focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+          onClick={() => swiperRef.current?.slideNext()}
+          className={`absolute top-1/2 right-0 md:right-28 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 md:p-4 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-100 hover:text-white z-10 transition-opacity duration-300 ${
+            isHovering ? "opacity-100" : "opacity-0"
+          }`}
         >
-          <ChevronRightIcon className="h-6 w-6 text-black" />
+          <ChevronRightIcon className="h-6 w-6" />
         </button>
       </div>
     </div>

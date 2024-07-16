@@ -12,6 +12,10 @@ import IconWithBadge from "./SVG/IconWithBadge";
 import ProfileIcon from "./SVG/ProfileIcon";
 import SearchIcon from "./SVG/SearchIcon";
 import TimerIcon from "./SVG/TimerIcon";
+// import IconWithBadge from "./SVG/IconWithBadge";
+// import ProfileIcon from "./SVG/ProfileIcon";
+// import SearchIcon from "./SVG/SearchIcon";
+// import TimerIcon from "./SVG/TimerIcon";
 
 const Navbar = () => {
   const menuArray = [
@@ -67,9 +71,7 @@ const Navbar = () => {
           <SearchIcon />
           <ProfileIcon />
           <TimerIcon />
-          <div className="">
-            <IconWithBadge badgeContent="0" />
-          </div>
+          <IconWithBadge />
         </div>
       </div>
 

@@ -9,6 +9,9 @@ import { useState } from "react";
 import CompareIcon from "./SVG/CompareIcon";
 import FavouriteIcon from "./SVG/FavouriteIcon";
 import QuickviewIcon from "./SVG/QuickviewIcon";
+// import CompareIcon from "./SVG/CompareIcon";
+// import FavouriteIcon from "./SVG/FavouriteIcon";
+// import QuickviewIcon from "./SVG/QuickviewIcon";
 
 const NewArraival = () => {
   const [startIndex, setStartIndex] = useState<number>(0);
@@ -51,15 +54,15 @@ const NewArraival = () => {
           <div className="flex justify-center space-x-4 mt-4 md:hidden">
             <button
               onClick={prevSlide}
-              className="bg-white bg-opacity-40 p-2 rounded-full focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+              className="bg-white bg-opacity-40 p-2 rounded-full focus:outline-none hover:bg-black hover:text-white border"
             >
-              <ChevronLeftIcon className="h-6 w-6 text-black" />
+              <ChevronLeftIcon className="h-6 w-6 text-black hover:text-white" />
             </button>
             <button
               onClick={nextSlide}
-              className="bg-white bg-opacity-50 p-2 rounded-full focus:outline-none hover:bg-slate-400 hover:bg-opacity-30"
+              className="bg-white bg-opacity-50 p-2 rounded-full focus:outline-none hover:bg-black hover:text-white border"
             >
-              <ChevronRightIcon className="h-6 w-6 text-black" />
+              <ChevronRightIcon className="h-6 w-6 text-black hover:text-white" />
             </button>
           </div>
         </div>

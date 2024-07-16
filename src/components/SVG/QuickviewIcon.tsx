@@ -1,6 +1,4 @@
-import React from "react";
-
-const CompareIcon = () => (
+const QuickviewIcon = () => (
   <div className="relative">
     <svg
       width="14"
@@ -17,4 +15,4 @@ const CompareIcon = () => (
   </div>
 );
 
-export default CompareIcon;
+export default QuickviewIcon;

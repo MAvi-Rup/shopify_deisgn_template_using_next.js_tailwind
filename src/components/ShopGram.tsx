@@ -20,37 +20,37 @@ const ShopGram = () => {
         <div className="grid grid-cols-3 md:grid-cols-6 gap-1">
           <div className="relative">
             <img className="rounded-lg" src="./gram1.png" alt="" srcset="" />
-            <div className=" absolute right-2 top-1">
+            <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
           <div className="relative">
             <img className="rounded-lg" src="./gram2.png" alt="" srcset="" />
-            <div className=" absolute right-1 top-1">
+            <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
           <div className="relative">
             <img className="rounded-lg" src="./gram3.png" alt="" srcset="" />
-            <div className=" absolute right-1 top-1">
+            <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
           <div className="relative">
             <img className="rounded-lg" src="./gram6.png" alt="" srcset="" />
-            <div className=" absolute right-1 top-1">
+            <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
           <div className="relative">
             <img className="rounded-lg" src="./gram5.png" alt="" srcset="" />
-            <div className=" absolute right-1 top-1">
+            <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
           <div className="relative">
             <img className="rounded-lg" src="./gram6.png" alt="" srcset="" />
-            <div className=" absolute right-1 top-1">
+            <div className=" absolute right-2 top-2">
               <CartIcon />
             </div>
           </div>
