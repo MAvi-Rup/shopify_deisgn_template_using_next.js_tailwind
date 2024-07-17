@@ -63,7 +63,7 @@ const Navbar = () => {
                       className="ml-1 h-5 w-5 text-gray-400"
                     />
                   </HoverCardTrigger>
-                  <HoverCardContent align="start">
+                  <HoverCardContent align="start" sideOffset={2}>
                     {item.content}
                   </HoverCardContent>
                 </HoverCard>

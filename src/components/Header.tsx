@@ -61,10 +61,10 @@ const Header = () => {
                   />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent>
-                  <DropdownMenuItem className="hover:translate-x-4 transition hover:scale-105 duration-300">
+                  <DropdownMenuItem className="hover:translate-x-2 transition hover:scale-105  duration-300">
                     France
                   </DropdownMenuItem>
-                  <DropdownMenuItem className="hover:translate-x-4 transition hover:scale-105 duration-300">
+                  <DropdownMenuItem className="hover:translate-x-2 transition hover:scale-105  duration-300">
                     日本語
                   </DropdownMenuItem>
                 </DropdownMenuContent>

@@ -1,5 +1,12 @@
 "use client";
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
 import InstagramIcon from "./SVG/InstagramIcon";
 
 const Footer = () => {
@@ -7,7 +14,6 @@ const Footer = () => {
     <footer className="bg-white mt-16 mb-5">
       <div className="mx-8">
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {/* This div will appear on all screen sizes */}
           <div>
             <img className="w-24" src="./logo.jpg" alt="Logo" />
 
@@ -75,7 +81,89 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className=" lg:hidden">
+          <div className="md:hidden">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="company">
+                <AccordionTrigger>Company</AccordionTrigger>
+                <AccordionContent>
+                  <ul className="space-y-2">
+                    {[
+                      "About Us",
+                      "Our Store",
+                      "Contact Us",
+                      "Size Guide",
+                      "My Account",
+                    ].map((item) => (
+                      <li key={item} className=" opacity-75 hover:opacity-100">
+                        <a
+                          href="#"
+                          className="text-gray-700 hover:text-gray-900 no-underline"
+                        >
+                          {item}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+          <div className="md:hidden">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="customer-service">
+                <AccordionTrigger>Customer Service</AccordionTrigger>
+                <AccordionContent>
+                  <ul className="space-y-2">
+                    {[
+                      "Privacy Policy",
+                      "Refund Policy",
+                      "Shipping and Return",
+                      "Terms and Conditions",
+                      "Advance Search",
+                      "Theme FAQs",
+                      "Store Locations",
+                    ].map((item) => (
+                      <li key={item} className="opacity-75 hover:opacity-100">
+                        <a
+                          href="#"
+                          className="text-gray-700 hover:text-gray-900"
+                        >
+                          {item}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+
+          <div className="md:hidden">
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="newsletter">
+                <AccordionTrigger>Newsletter</AccordionTrigger>
+                <AccordionContent>
+                  <div>
+                    <p className="text-sm text-gray-500 mb-4">
+                      Enter your email address to get $10 off your first order
+                      and free shipping. Updates information on Sales and
+                      Offers.
+                    </p>
+                    <input
+                      className="w-full p-2 border-2 border-amber-950 rounded-full mb-2"
+                      placeholder="Enter Your Email..."
+                      type="text"
+                    />
+                    <button className="w-full py-2 px-4 bg-black text-white rounded-full text-center">
+                      SUBSCRIBE
+                    </button>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+
+          <div className="hidden md:block lg:hidden">
             <p className="font-semibold text-gray-900">Company</p>
 
             <ul className="mt-6 space-y-4 text-sm">
@@ -121,8 +209,10 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          {/* This div is only shown on medium screens */}
-          <div className="lg:hidden">
+
+          {/* page offset */}
+
+          <div className="hidden md:block lg:hidden">
             <p className="font-semibold text-gray-900">Customer Service</p>
 
             <ul className="mt-6 space-y-4 text-sm">
@@ -184,8 +274,8 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          {/* This div is only shown on medium screens */}
-          <div className="lg:hidden">
+
+          <div className="hidden md:block lg:hidden">
             <p className="font-semibold text-gray-900">Sign Up to Newsletter</p>
 
             <div className="mt-6 space-y-4 text-sm">
@@ -327,7 +417,7 @@ const Footer = () => {
                   Enter your email address to get $10 off your first order and
                   free shipping. Updates information on Sales and Offers.
                 </p>
-                <section className="flex gap-4">
+                <section className="flex gap-4 pt-5 md:pt-10">
                   <input
                     className="w-full p-3 border-2 border-amber-950 rounded-full"
                     placeholder="Enter Your Email..."
