@@ -5,7 +5,7 @@ import QuickviewIcon from "./SVG/QuickviewIcon";
 import SearchIcon from "./SVG/SearchIcon";
 import TimerIcon from "./SVG/TimerIcon";
 
-const LeftMenu: React.FC = () => {
+const RightMenu: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
 
   useEffect(() => {
@@ -52,4 +52,4 @@ const LeftMenu: React.FC = () => {
   );
 };
 
-export default LeftMenu;
+export default RightMenu;

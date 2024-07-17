@@ -5,9 +5,9 @@ import ExclusivePost from "@/components/ExclusivePost";
 import FeatureContent from "@/components/FeatureContent";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import LeftMenu from "@/components/LeftMenu";
 import Navbar from "@/components/Navbar";
 import NewArrivals from "@/components/NewArraivals";
+import RightMenu from "@/components/RightMenu";
 import ShopGram from "@/components/ShopGram";
 import TrendingPost from "@/components/TrendingPost";
 
@@ -25,7 +25,7 @@ export default function Home() {
       <NewArrivals />
       <CustomerReview />
       <ShopGram />
-      <LeftMenu />
+      <RightMenu />
       <Footer />
     </main>
   );
