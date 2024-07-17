@@ -10,6 +10,32 @@ import {
 import InstagramIcon from "./SVG/InstagramIcon";
 
 const Footer = () => {
+  const companyLinks: string[] = [
+    "About Us",
+    "Our Store",
+    "Contact Us",
+    "Size Guide",
+    "My Account",
+  ];
+
+  const customerServiceLinks = [
+    "Privacy Policy",
+    "Refund Policy",
+    "Shipping and Return",
+    "Terms and Conditions",
+    "Advance Search",
+    "Theme FAQs",
+    "Store Locations",
+  ];
+
+  const socialLinks = [
+    { name: "Facebook", icon: <InstagramIcon /> },
+    { name: "Instagram", icon: <InstagramIcon /> },
+    { name: "Twitter", icon: <InstagramIcon /> },
+    { name: "GitHub", icon: <InstagramIcon /> },
+    { name: "Dribbble", icon: <InstagramIcon /> },
+  ];
+
   return (
     <footer className="bg-white mt-16 mb-5">
       <div className="mx-8">
@@ -23,61 +49,19 @@ const Footer = () => {
             </p>
 
             <ul className="mt-8 flex gap-4">
-              <li>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-gray-700 transition opacity-75 hover:opacity-100"
-                >
-                  <span className="sr-only">Facebook</span>
-                  <InstagramIcon />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-gray-700 transition opacity-75 hover:opacity-100"
-                >
-                  <span className="sr-only">Instagram</span>
-                  <InstagramIcon />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-gray-700 transition opacity-75 hover:opacity-100"
-                >
-                  <span className="sr-only">Twitter</span>
-                  <InstagramIcon />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-gray-700 transition opacity-70 hover:opacity-100"
-                >
-                  <span className="sr-only">GitHub</span>
-                  <InstagramIcon />
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                  className="text-gray-700 transition opacity-70 hover:opacity-100"
-                >
-                  <span className="sr-only">Dribbble</span>
-                  <InstagramIcon />
-                </a>
-              </li>
+              {socialLinks.map((item) => (
+                <li>
+                  <a
+                    href="#"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="text-gray-700 transition opacity-75 hover:opacity-100"
+                  >
+                    <span className="sr-only">{item.name}</span>
+                    {item.icon}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -87,13 +71,7 @@ const Footer = () => {
                 <AccordionTrigger>Company</AccordionTrigger>
                 <AccordionContent>
                   <ul className="space-y-2">
-                    {[
-                      "About Us",
-                      "Our Store",
-                      "Contact Us",
-                      "Size Guide",
-                      "My Account",
-                    ].map((item) => (
+                    {companyLinks.map((item) => (
                       <li key={item} className=" opacity-75 hover:opacity-100">
                         <a
                           href="#"
@@ -114,15 +92,7 @@ const Footer = () => {
                 <AccordionTrigger>Customer Service</AccordionTrigger>
                 <AccordionContent>
                   <ul className="space-y-2">
-                    {[
-                      "Privacy Policy",
-                      "Refund Policy",
-                      "Shipping and Return",
-                      "Terms and Conditions",
-                      "Advance Search",
-                      "Theme FAQs",
-                      "Store Locations",
-                    ].map((item) => (
+                    {customerServiceLinks.map((item) => (
                       <li key={item} className="opacity-75 hover:opacity-100">
                         <a
                           href="#"
@@ -167,46 +137,16 @@ const Footer = () => {
             <p className="font-semibold text-gray-900">Company</p>
 
             <ul className="mt-6 space-y-4 text-sm">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  Our Store
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  Contact Us
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  Size Guide
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75 hover:translate-x-4 hover:scale-110 duration-300"
-                >
-                  My Account
-                </a>
-              </li>
+              {companyLinks.map((item) => (
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -216,62 +156,16 @@ const Footer = () => {
             <p className="font-semibold text-gray-900">Customer Service</p>
 
             <ul className="mt-6 space-y-4 text-sm">
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  Refund Policy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  Shipping and Return
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  Terms and Conditions
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  Advance Search
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  Theme FAQs
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-700 transition hover:opacity-75"
-                >
-                  Store Locations
-                </a>
-              </li>
+              {customerServiceLinks.map((item) => (
+                <li>
+                  <a
+                    href="#"
+                    className="text-gray-700 transition hover:opacity-75"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -301,46 +195,16 @@ const Footer = () => {
               <p className="font-semibold text-gray-900">Company</p>
 
               <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    About Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Our Store
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Size Guide
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75 hover:translate-x-4 hover:scale-110 duration-300"
-                  >
-                    My Account
-                  </a>
-                </li>
+                {companyLinks.map((item) => (
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
@@ -348,62 +212,16 @@ const Footer = () => {
               <p className="font-semibold text-gray-900">Customer Service</p>
 
               <ul className="mt-6 space-y-4 text-sm">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Refund Policy
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Shipping and Return
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Terms and Conditions
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Advance Search
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Theme FAQs
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 transition hover:opacity-75"
-                  >
-                    Store Locations
-                  </a>
-                </li>
+                {customerServiceLinks.map((item) => (
+                  <li>
+                    <a
+                      href="#"
+                      className="text-gray-700 transition hover:opacity-75"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
