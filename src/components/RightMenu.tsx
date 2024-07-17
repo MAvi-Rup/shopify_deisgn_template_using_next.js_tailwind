@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
+import AccountIcon from "./SVG/AccountIcon";
 import FavouriteIcon from "./SVG/FavouriteIcon";
 import QuickviewIcon from "./SVG/QuickviewIcon";
 import SearchIcon from "./SVG/SearchIcon";
-import TimerIcon from "./SVG/TimerIcon";
 
 const RightMenu: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
@@ -25,8 +25,8 @@ const RightMenu: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed right-0 top-1/2 transform -translate-y-1/2 bg-white p-4 rounded-lg shadow-lg hidden lg:block">
-      <ul className="space-y-4">
+    <div className="fixed lg:right-0 lg:top-1/2 lg:transform lg:-translate-y-1/2 bg-white p-4 rounded-t-lg lg:rounded-r-lg lg:rounded-tl-none shadow-lg w-full lg:w-auto bottom-0 lg:bottom-auto z-50">
+      <ul className="flex lg:flex-col justify-around lg:justify-start lg:space-y-4">
         <li>
           <button className="p-2 hover:bg-gray-100 rounded-full">
             <QuickviewIcon />
@@ -39,7 +39,7 @@ const RightMenu: React.FC = () => {
         </li>
         <li>
           <button className="p-2 hover:bg-gray-100 rounded-full">
-            <TimerIcon />
+            <AccountIcon />
           </button>
         </li>
         <li>

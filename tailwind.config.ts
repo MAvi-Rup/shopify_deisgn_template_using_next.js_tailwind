@@ -33,7 +33,7 @@ const config = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       fontFamily: {
-        sans: ["Jost", "sans-serif"], // Make Jost the default sans-serif font
+        sans: ["Jost", "sans-serif"],
       },
     },
   },
