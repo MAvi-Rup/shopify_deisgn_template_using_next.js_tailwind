@@ -5,6 +5,7 @@ import {
   ChevronRightIcon,
   StarIcon,
 } from "@heroicons/react/24/solid";
+import Image from "next/image";
 import { useRef, useState } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -16,7 +17,7 @@ import QuickviewIcon from "./SVG/QuickviewIcon";
 
 const TrendingPost = () => {
   const swiperRef = useRef(null);
-  const [isHovering, setIsHovering] = useState(false);
+  const [isHovering, setIsHovering] = useState<boolean>(false);
 
   const renderStars: string[] = (rating: number) => {
     const stars = [];
@@ -85,10 +86,14 @@ const TrendingPost = () => {
             <SwiperSlide key={product.id}>
               <div className="relative group">
                 <div className="aspect-[330/500] overflow-hidden relative">
-                  <img
+                  <Image
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover hover:scale-110 duration-300 rounded"
+                    layout="fill"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    objectFit="cover"
+                    className="hover:scale-110 duration-300 rounded"
                   />
                   {product.preOrder === true ? (
                     <button className="absolute w-[calc(100%-20px)] left-1/2 transform -translate-x-1/2 bottom-5 py-2 md:py-4 bg-zinc-50 text-black hover:bg-black hover:text-white rounded-full text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 hover:font-semibold">

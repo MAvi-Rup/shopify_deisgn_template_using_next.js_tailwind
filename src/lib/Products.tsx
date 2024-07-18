@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    image: "./trending1.jpg",
+    image: "/trending1.jpg",
     name: "Square Textured Striped",
     price: "$19.99",
     actual_price: "$120",
@@ -11,7 +11,7 @@ export const products = [
   },
   {
     id: 2,
-    image: "./trending2.jpg",
+    image: "/trending2.jpg",
     name: "Rounded Neck T-Shirt",
     price: "$24.99",
     actual_price: "$720",
@@ -21,7 +21,7 @@ export const products = [
   },
   {
     id: 3,
-    image: "./trending3.jpg",
+    image: "/trending3.jpg",
     name: "Slim Fit Jeans",
     price: "$29.99",
     star: 4,
@@ -29,7 +29,7 @@ export const products = [
   },
   {
     id: 4,
-    image: "./trending4.jpg",
+    image: "/trending4.jpg",
     name: "Casual Sneakers",
     price: "$34.99",
     actual_price: "$45",
@@ -39,7 +39,7 @@ export const products = [
   },
   {
     id: 5,
-    image: "./trending7.jpg",
+    image: "/trending7.jpg",
     name: "Leather Jacket",
     price: "$39.99",
     star: 5,
@@ -48,7 +48,7 @@ export const products = [
   },
   {
     id: 6,
-    image: "./trending5.jpg",
+    image: "/trending5.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",
@@ -57,7 +57,7 @@ export const products = [
   },
   {
     id: 7,
-    image: "./trending4.jpg",
+    image: "/trending4.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",
@@ -66,7 +66,7 @@ export const products = [
   },
   {
     id: 8,
-    image: "./trending6.jpg",
+    image: "/trending6.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",
@@ -75,7 +75,7 @@ export const products = [
   },
   {
     id: 9,
-    image: "./trending1.jpg",
+    image: "/trending1.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",
@@ -84,7 +84,7 @@ export const products = [
   },
   {
     id: 10,
-    image: "./trending7.jpg",
+    image: "/trending7.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",
@@ -96,7 +96,7 @@ export const products = [
 export const newProducts = [
   {
     id: 1,
-    image: "./newArraival.jpg",
+    image: "/newArraival.jpg",
     name: "Square Textured Striped",
     price: "$19.99",
     actual_price: "$120",
@@ -107,7 +107,7 @@ export const newProducts = [
   },
   {
     id: 2,
-    image: "./newArraival2.jpg",
+    image: "/newArraival2.jpg",
     name: "Rounded Neck T-Shirt",
     price: "$24.99",
     actual_price: "$720",
@@ -118,7 +118,7 @@ export const newProducts = [
   },
   {
     id: 3,
-    image: "./newArraival3.jpg",
+    image: "/newArraival3.jpg",
     name: "Slim Fit Jeans",
     price: "$29.99",
     star: 4,
@@ -126,7 +126,7 @@ export const newProducts = [
   },
   {
     id: 4,
-    image: "./newArraival4.jpg",
+    image: "/newArraival4.jpg",
     name: "Casual Sneakers",
     price: "$34.99",
     actual_price: "$45",
@@ -137,7 +137,7 @@ export const newProducts = [
   },
   {
     id: 5,
-    image: "./newArraival5.jpg",
+    image: "/newArraival5.jpg",
     name: "Leather Jacket",
     price: "$39.99",
     star: 5,
@@ -146,7 +146,7 @@ export const newProducts = [
   },
   {
     id: 6,
-    image: "./newArraival6.jpg",
+    image: "/newArraival6.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",
@@ -155,7 +155,7 @@ export const newProducts = [
   },
   {
     id: 7,
-    image: "./newArraival7.jpg",
+    image: "/newArraival7.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",
@@ -164,7 +164,7 @@ export const newProducts = [
   },
   {
     id: 8,
-    image: "./newArraival2.jpg",
+    image: "/newArraival2.jpg",
     name: "Denim Shorts",
     price: "$44.99",
     actual_price: "$60",
@@ -227,5 +227,23 @@ export const reviews = [
     star: 4,
     name: "Sophia Lee",
     status: "Verified Buyer",
+  },
+];
+
+export const exclusivePost = [
+  {
+    image: "/exclusive.jpg",
+    caption: "ONLINE EXCLUSIVE",
+    title: "Oversized Shirt",
+  },
+  {
+    image: "/exclusive2.jpg",
+    caption: "BEST-SELLERS",
+    title: "Unique SS'23",
+  },
+  {
+    image: "/exclusive3.jpg",
+    caption: "LIMITED EDITION",
+    title: "Autumn Trending",
   },
 ];
