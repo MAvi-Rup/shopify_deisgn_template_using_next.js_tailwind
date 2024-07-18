@@ -29,11 +29,11 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { name: "Facebook", icon: <InstagramIcon /> },
-    { name: "Instagram", icon: <InstagramIcon /> },
-    { name: "Twitter", icon: <InstagramIcon /> },
-    { name: "GitHub", icon: <InstagramIcon /> },
-    { name: "Dribbble", icon: <InstagramIcon /> },
+    { key: "1", name: "Facebook", icon: <InstagramIcon /> },
+    { key: "2", name: "Instagram", icon: <InstagramIcon /> },
+    { key: "3", name: "Twitter", icon: <InstagramIcon /> },
+    { key: "4", name: "GitHub", icon: <InstagramIcon /> },
+    { key: "5", name: "Dribbble", icon: <InstagramIcon /> },
   ];
 
   return (
@@ -50,7 +50,7 @@ const Footer = () => {
 
             <ul className="mt-8 flex gap-4">
               {socialLinks.map((item) => (
-                <li>
+                <li key={item.key}>
                   <a
                     href="#"
                     rel="noreferrer"
@@ -138,7 +138,7 @@ const Footer = () => {
 
             <ul className="mt-6 space-y-4 text-sm">
               {companyLinks.map((item) => (
-                <li>
+                <li key={item}>
                   <a
                     href="#"
                     className="text-gray-700 transition hover:opacity-75"
@@ -157,7 +157,7 @@ const Footer = () => {
 
             <ul className="mt-6 space-y-4 text-sm">
               {customerServiceLinks.map((item) => (
-                <li>
+                <li key={item}>
                   <a
                     href="#"
                     className="text-gray-700 transition hover:opacity-75"
@@ -196,7 +196,7 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 {companyLinks.map((item) => (
-                  <li>
+                  <li key={item}>
                     <a
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"
@@ -213,7 +213,7 @@ const Footer = () => {
 
               <ul className="mt-6 space-y-4 text-sm">
                 {customerServiceLinks.map((item) => (
-                  <li>
+                  <li key={item}>
                     <a
                       href="#"
                       className="text-gray-700 transition hover:opacity-75"

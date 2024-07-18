@@ -15,7 +15,7 @@ const CustomerReview = () => {
   const swiperRef = useRef(null);
   const [isHovering, setIsHovering] = useState(false);
 
-  const renderStars = (rating) => {
+  const renderStars: string[] = (rating: number) => {
     const stars = [];
     for (let i = 1; i <= 5; i++) {
       stars.push(
@@ -85,22 +85,24 @@ const CustomerReview = () => {
           ))}
         </Swiper>
 
-        <button
-          onClick={() => swiperRef.current?.slidePrev()}
-          className={`absolute top-1/2 left-0 md:left-24 transform -translate-y-1/2 bg-white bg-opacity-40 p-2 md:p-4 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-100 hover:text-white z-10 transition-opacity duration-300 ${
-            isHovering ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <ChevronLeftIcon className="h-6 w-6" />
-        </button>
-        <button
-          onClick={() => swiperRef.current?.slideNext()}
-          className={`absolute top-1/2 right-0 md:right-24 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 md:p-4 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-100 hover:text-white z-10 transition-opacity duration-300 ${
-            isHovering ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          <ChevronRightIcon className="h-6 w-6" />
-        </button>
+        <div>
+          <button
+            onClick={() => swiperRef.current?.slidePrev()}
+            className={`absolute top-1/2 left-0 md:left-24 transform -translate-y-1/2 bg-white bg-opacity-40 p-2 md:p-4 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-100 hover:text-white z-10 transition-opacity duration-300 ${
+              isHovering ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <ChevronLeftIcon className="h-6 w-6" />
+          </button>
+          <button
+            onClick={() => swiperRef.current?.slideNext()}
+            className={`absolute top-1/2 right-0 md:right-24 transform -translate-y-1/2 bg-white bg-opacity-50 p-2 md:p-4 rounded-full focus:outline-none hover:bg-black hover:bg-opacity-100 hover:text-white z-10 transition-opacity duration-300 ${
+              isHovering ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <ChevronRightIcon className="h-6 w-6" />
+          </button>
+        </div>
       </div>
     </div>
   );

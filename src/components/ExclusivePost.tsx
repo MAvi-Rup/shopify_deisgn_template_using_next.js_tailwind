@@ -1,26 +1,27 @@
 "use client";
 
 const ExclusivePost = () => {
+  const exclusivePost = [
+    {
+      image: "/exclusive.jpg",
+      caption: "ONLINE EXCLUSIVE",
+      title: "Oversized Shirt",
+    },
+    {
+      image: "/exclusive2.jpg",
+      caption: "BEST-SELLERS",
+      title: "Unique SS'23",
+    },
+    {
+      image: "/exclusive3.jpg",
+      caption: "LIMITED EDITION",
+      title: "Autumn Trending",
+    },
+  ];
   return (
     <div className="overflow-x-auto w-screen ">
       <div className="flex gap-8 px-8 mb-5 mt-5 md:mt-10 md:mb-10 justify-center">
-        {[
-          {
-            image: "/exclusive.jpg",
-            caption: "ONLINE EXCLUSIVE",
-            title: "Oversized Shirt",
-          },
-          {
-            image: "/exclusive2.jpg",
-            caption: "BEST-SELLERS",
-            title: "Unique SS'23",
-          },
-          {
-            image: "/exclusive3.jpg",
-            caption: "LIMITED EDITION",
-            title: "Autumn Trending",
-          },
-        ].map((item, index) => (
+        {exclusivePost.map((item, index) => (
           <div
             key={index}
             className="relative cursor-pointer overflow-hidden flex-shrink-0 group"

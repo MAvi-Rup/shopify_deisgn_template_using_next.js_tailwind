@@ -1,5 +1,3 @@
-"use client";
-
 import CartIcon from "./SVG/CartIcon";
 
 const ShopGram = () => {

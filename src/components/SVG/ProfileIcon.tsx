@@ -1,5 +1,3 @@
-"use client";
-
 const ProfileIcon = () => (
   <div className="relative">
     <svg

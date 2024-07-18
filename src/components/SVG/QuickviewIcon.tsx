@@ -1,4 +1,3 @@
-"use client";
 const QuickviewIcon = () => (
   <div className="relative">
     <svg

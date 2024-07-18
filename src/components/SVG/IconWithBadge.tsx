@@ -1,4 +1,3 @@
-"use client";
 const IconWithBadge = ({ badgeContent }) => (
   <div className="relative p-2">
     <div className="relative">

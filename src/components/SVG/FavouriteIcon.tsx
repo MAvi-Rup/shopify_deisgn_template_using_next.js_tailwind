@@ -1,5 +1,3 @@
-"use client";
-
 const FavouriteIcon = () => (
   <div className="relative">
     <svg

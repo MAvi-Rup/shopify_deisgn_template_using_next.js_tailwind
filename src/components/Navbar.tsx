@@ -25,7 +25,7 @@ const Navbar = () => {
           {["Blog 1", "Blog 2", "Blog 3", "Blog 4"].map((blog, index) => (
             <li
               key={index}
-              className="p-1 hover:translate-x-4 hover:scale-110 duration-300"
+              className="p-1 hover:translate-x-2 hover:scale-110 duration-300"
             >
               {blog}
             </li>
@@ -82,7 +82,7 @@ const Navbar = () => {
       {/* Navbar for mobile screens */}
       <Sheet>
         <div className="lg:hidden flex justify-between items-center py-4">
-          <SheetTrigger>
+          <SheetTrigger asChild>
             <button className="text-gray-500 pl-4">
               <Bars3Icon className="h-8 w-8 text-black" />
             </button>

@@ -1,4 +1,3 @@
-"use client";
 const InstagramIcon = () => (
   <div className="relative">
     <svg

@@ -1,4 +1,3 @@
-"use client";
 const AccountIcon = () => (
   <div className="relative">
     <svg

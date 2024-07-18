@@ -1,13 +1,13 @@
 "use client";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 import { useRef, useState } from "react";
 import { Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/navigation";
+// import "swiper/css/pagination";
 
 const slides = [
   {
@@ -43,10 +43,6 @@ const MyCarousel = () => {
         modules={[Navigation, Pagination]}
         spaceBetween={0}
         slidesPerView={1}
-        navigation={{
-          prevEl: ".swiper-button-prev",
-          nextEl: ".swiper-button-next",
-        }}
         pagination={{
           clickable: true,
           el: ".swiper-pagination",
@@ -61,11 +57,13 @@ const MyCarousel = () => {
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
-            <div className="relative w-full">
-              <img
+            <div className="relative w-full h-[500px] sm:h-[500px] md:h-[600px] lg:h-[700px]">
+              <Image
                 src={slide.image}
                 alt={`Slide ${index + 1}`}
-                className="object-cover w-full h-[500px] sm:h-[500px] md:h-[600px] lg:h-[700px] scale-110"
+                fill
+                style={{ objectFit: "cover" }}
+                className="scale-110"
               />
 
               <div className="absolute inset-0 flex flex-col justify-center items-start p-2 sm:p-4 md:p-6 lg:p-10 bg-opacity-30 text-black">

@@ -1,5 +1,3 @@
-"use client";
-
 const TimerIcon = () => (
   <div className="relative">
     <svg

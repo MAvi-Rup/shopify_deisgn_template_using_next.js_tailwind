@@ -1,5 +1,3 @@
-"use client";
-
 const FeatureContent = () => {
   return (
     <div className="mb-8">

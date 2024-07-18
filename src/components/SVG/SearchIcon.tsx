@@ -1,5 +1,3 @@
-"use client";
-
 const SearchIcon = () => (
   <div className="relative">
     <svg

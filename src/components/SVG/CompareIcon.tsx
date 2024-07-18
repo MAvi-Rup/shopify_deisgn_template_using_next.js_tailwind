@@ -1,5 +1,3 @@
-"use client";
-
 const CompareIcon = () => (
   <div className="relative">
     <svg
